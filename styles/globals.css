@@ -8,13 +8,6 @@
 		outline: none;
 	}
 
-	html,
-	body,
-	#__next {
-		height: -webkit-fill-available;
-		min-height: 100vh;
-	}
-
 	body {
 		@apply bg-white dark:bg-black text-neutral-900 dark:text-neutral-50;
 	}

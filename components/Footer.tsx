@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 
 export default function Footer() {
 	const footer = (
-		<footer className="fixed top-2 left-3 sm:top-auto sm:left-auto sm:right-3 sm:bottom-2 text-center text-sm">
+		<footer className="fixed top-2 left-3 sm:top-auto sm:left-auto sm:right-3 sm:bottom-2 text-center">
 			<a
 				href="https://twitter.com/KarelRic"
 				target="_blank"

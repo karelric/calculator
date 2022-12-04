@@ -12,7 +12,7 @@ export default function Document() {
 					rel="stylesheet"
 				/>
 			</Head>
-			<body className="overflow-hidden sm:overflow-auto select-none">
+			<body className="overflow-hidden sm:overflow-auto select-none font-sans">
 				<Main />
 				<NextScript />
 			</body>

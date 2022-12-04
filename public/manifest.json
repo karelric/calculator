@@ -1,6 +1,7 @@
 {
+	"name": "Calculator",
 	"short_name": "Calc",
-	"name": "Calc",
+	"description": "Simple Web Calculator",
 	"icons": [
 		{
 			"src": "favicon.png",
@@ -20,6 +21,7 @@
 	],
 	"start_url": ".",
 	"display": "standalone",
+	"orientation": "portrait-primary",
 	"theme_color": "#ffffff",
 	"background_color": "#ffffff"
 }

@@ -3,11 +3,7 @@ import Calculator, { KeyType } from "../utils/calculator";
 import Keypad from "./Keypad";
 import Screen from "./Screen";
 
-type Props = {
-	env?: "development" | "production" | "test";
-};
-
-export default function Calc({ env }: Props) {
+export default function Calc() {
 	const calc = useMemo(() => new Calculator(), []);
 
 	const [error, setError] = useState(false);
@@ -39,20 +35,23 @@ export default function Calc({ env }: Props) {
 	}, [calc, execute]);
 
 	return (
-		<div className="fixed sm:relative w-full h-full flex flex-col pb-[env(safe-area-inset-bottom)]">
-			<Screen display={display} error={error} />
+		<div
+			className="fixed top-0 sm:relative w-full h-full max-w-[436px] flex flex-col
+			justify-end pb-[env(safe-area-inset-bottom)]"
+		>
+			<div className="flex flex-col p-5">
+				<Screen
+					display={display}
+					error={error}
+					onDelete={() => execute(() => calc.remove())}
+				/>
 
-			<Keypad
-				operator={operator}
-				isCleared={cleared}
-				onKey={(k) => execute(() => calc.execute(k))}
-			/>
-
-			{env === "development" && (
-				<p className="text-center p-2 bg-neutral-900 rounded break-words">
-					{JSON.stringify(calc.info)}
-				</p>
-			)}
+				<Keypad
+					operator={operator}
+					isCleared={cleared}
+					onKey={(k) => execute(() => calc.execute(k))}
+				/>
+			</div>
 		</div>
 	);
 }

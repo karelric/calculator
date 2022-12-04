@@ -1,16 +1,16 @@
-import { Courier_Prime } from "@next/font/google";
+import { Rubik } from "@next/font/google";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import "../styles/globals.css";
 
-const mono = Courier_Prime({ weight: "400", subsets: ["latin"] });
+const font = Rubik({ weight: ["300", "400"], subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<style jsx global>{`
 				html {
-					--custom-mono: ${mono.style.fontFamily};
+					--default-font: ${font.style.fontFamily};
 				}
 			`}</style>
 

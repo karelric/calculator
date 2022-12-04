@@ -13,7 +13,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				mono: ["var(--custom-mono)", ...fontFamily.mono],
+				sans: ["var(--default-font)", ...fontFamily.sans],
 			},
 			colors: {
 				operator: "#FF9F0A",

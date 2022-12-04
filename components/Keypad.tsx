@@ -55,7 +55,7 @@ type Props = {
 
 export default function Keypad({ isCleared, operator, onKey }: Props) {
 	return (
-		<div className="grid grid-cols-4 p-4 sm:p-0 gap-5 sm:gap-[2px] items-stretch sm:flex-none">
+		<div className="grid grid-cols-4 gap-5 sm:gap-[2px] items-stretch w-full">
 			{keys.map((key) => {
 				const icon = key.key == "ac" && !isCleared ? "C" : key.icon;
 				return (
@@ -110,9 +110,9 @@ function Key({ active = false, data, onKey }: KeyProps) {
 		<button
 			type="button"
 			onClick={() => onKey?.(data.key)}
-			className={`flex flex-col justify-center items-center text-4xl sm:text-3xl
+			className={`flex flex-col justify-center items-center text-3xl sm:text-4xl
 			font-medium select-none active:scale-[.98] transition-transform duration-100
-			rounded-full sm:rounded-none ${color} ${isSpan} ${isActive}`}
+			rounded-full leading-none sm:rounded-none ${color} ${isSpan} ${isActive}`}
 		>
 			{data.icon}
 		</button>

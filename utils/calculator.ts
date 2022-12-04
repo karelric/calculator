@@ -121,6 +121,9 @@ export default class Calculator {
 			this.clear();
 			throw err;
 		}
+
+		const [l, o, r] = this.split();
+		console.log(l, o, r);
 	}
 
 	remove() {
@@ -197,8 +200,10 @@ export default class Calculator {
 		const [left, op, right] = this.split();
 		if (!op || !right) return;
 
-		const a = Number(left.join(""));
-		const b = Number(right.join(""));
+		const a = Number(left.join("").replaceAll(",", "."));
+		const b = Number(right.join("").replaceAll(",", "."));
+
+		console.log(a, b);
 
 		switch (op) {
 			case "add":
