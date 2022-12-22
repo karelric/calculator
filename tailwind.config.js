@@ -21,8 +21,8 @@ module.exports = {
 		},
 	},
 	plugins: [
-		plugin(function ({ addVariant }) {
-			addVariant("xs", "@media screen and (max-width: theme('screens.sm'))"); // instead of hard-coded 640px use sm breakpoint value from config. Or anything
+		plugin(({ addVariant, addComponents }) => {
+			addVariant("xs", "@media screen and (max-width: theme('screens.sm'))");
 		}),
 	],
 };

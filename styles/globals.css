@@ -11,4 +11,9 @@
 	body {
 		@apply bg-white dark:bg-black text-neutral-900 dark:text-neutral-50;
 	}
+
+	.min-h-d {
+		min-height: 100vh;
+		min-height: 100dvh;
+	}
 }
