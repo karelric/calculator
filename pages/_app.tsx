@@ -1,5 +1,5 @@
-import { Rubik } from "@next/font/google";
 import type { AppProps } from "next/app";
+import { Rubik } from "next/font/google";
 import Head from "next/head";
 import "../styles/globals.css";
 
